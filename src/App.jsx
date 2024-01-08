@@ -1,9 +1,12 @@
 import { useState, useEffect } from 'react'
 import './App.css'
 import LoadingScreen from './pages/LoadingScreen'
+import MainPage from './pages/MainPage';
+import Header from './Components/Header'
 
 function App() {
   const [stars, setStars] = useState([]);
+  const [isLoading, setIsloading] = useState(true)
     
   useEffect(() => {
       function addStars() {
@@ -31,9 +34,27 @@ function App() {
       addStars();
     }, []);
 
+    setTimeout(
+      () => {
+        setIsloading(false)
+      },
+      20000
+    )
   return (
     <>
-      <LoadingScreen stars={stars}/>
+      {(isLoading)? <div style={
+        {
+          width: '100%',
+          overflow: 'hidden'
+        }
+      } className="load-cont">
+        <LoadingScreen stars={stars}/>
+      </div>
+      :
+      <div className='cont-cont'>
+        <Header />
+        <MainPage />
+      </div >}
     </>
   )
 }

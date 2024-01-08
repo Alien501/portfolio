@@ -11,7 +11,7 @@ import './LoadingScreen.css'
 export default function LoadingScreen({stars}) {
     const container = useRef();
 
-    useGSAP(() => {
+    useLayoutEffect(() => {
         gsap.fromTo('.rocket', {
             bottom: '-20%',
         }, {
@@ -19,9 +19,9 @@ export default function LoadingScreen({stars}) {
             duration: 4,
             repeat: 0,
         })
-    }, {scope: container})
+    })
 
-    useGSAP(() => {
+    useLayoutEffect(() => {
         gsap.to('.rocket',{
             rotateZ: '0.5deg',
             duration: .1,
@@ -29,7 +29,7 @@ export default function LoadingScreen({stars}) {
             yoyo: true,
             repeat: -1
         })
-    }, {scope: container})
+    })
 
     
     useLayoutEffect(() => {
@@ -94,12 +94,17 @@ export default function LoadingScreen({stars}) {
             contexts.forEach((ctx) => ctx.revert());
         };
     });
-    
 
     return(
         <div ref={container} className="loading-page-container">
             <img src={RokcetImg} alt="Rocket" className="rocket" />
             {stars}
+            <div className="loading-text">
+                Somewhere in this
+                <div>
+                    Universe
+                </div>          
+            </div>
         </div>
     )
 }

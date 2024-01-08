@@ -2,6 +2,25 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-family: sans-serif;
-    overflow: hidden;
+    font-family: 'Jost', sans-serif;
+    scroll-behavior: smooth;
+    /* overflow: hidden; */
+}
+
+:root {
+    --color-bg: #02001C;
+    --color-bg-transparent: hsla(244, 100%, 5%, 0.9);
+    --color-text-transparent: hsla(244, 100%, 85%, 0.48);
+    --color-text-bright: rgb(184, 179, 255);
+    --color-text-normal: hsla(244, 42%, 68%, 1);
+    --color-bg-dark: hsla(240, 95%, 8%, 1);
+    --color-bg-dark-transparent: hsla(240, 95%, 8%, 0.9);
+}
+
+body {
+    background-color: var(--color-bg, #02001C);
+}
+
+body::-webkit-scrollbar {
+    display: none;
 }
