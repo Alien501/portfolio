@@ -2,11 +2,13 @@ import React from "react";
 
 import './MainPage.css'
 import HeroSection from "../Components/HeroSection";
+import AboutSection from "../Components/AboutSection";
 
-export default function MainPage() {
+export default function MainPage({stars}) {
     return(
         <div className="content-container">
-            <HeroSection />
+            <HeroSection stars={stars}/>
+            <AboutSection />
         </div>
     )
 }

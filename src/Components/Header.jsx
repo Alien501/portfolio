@@ -33,8 +33,8 @@ export default function Header() {
 
             <div className={`header-menu-container ${isClicked? 'active': ''}`}>
                 <div className="menu-container">
-                    <a href="#" className="menu-item" onClick={onClick}>Home</a>
-                    <a href="#" className="menu-item" onClick={onClick}>About</a>
+                    <a href="#hero-section" className="menu-item" onClick={onClick}>Home</a>
+                    <a href="#about-section" className="menu-item" onClick={onClick}>About</a>
                     <a href="#" className="menu-item" onClick={onClick}>Education</a>
                     <a href="#" className="menu-item" onClick={onClick}>Projects</a>
                     <a href="#" className="menu-item" onClick={onClick}>Contact Me</a>

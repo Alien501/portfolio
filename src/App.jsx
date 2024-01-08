@@ -53,7 +53,7 @@ function App() {
       :
       <div className='cont-cont'>
         <Header />
-        <MainPage />
+        <MainPage stars={stars}/>
       </div >}
     </>
   )
