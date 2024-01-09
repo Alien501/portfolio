@@ -1,0 +1,34 @@
+.education-card {
+    width: 290px;
+    padding: 10px;
+    margin: 5px auto;
+    color: var(--color-text-normal);
+    border: 2px solid var(--color-text-bright);
+    border-radius: 10px;
+    background-color: var(--color-bg-dark);
+    box-shadow: 0px 0px 10px var(--color-bg);
+    font-size: 1rem;
+    line-height: 1.6rem;
+    letter-spacing: .1rem;
+    user-select: none;
+    transition: .3s ease;
+    scale: 0.9;
+    overflow: hidden;
+    perspective: 500px;
+}
+
+.education-card:hover {
+    transform: rotateX(var(--x-rotation, 0deg)) rotateY(var(--y-rotation, 0deg));
+    cursor: pointer;
+    scale: 1;
+    box-shadow: 0px 5px 10px var(--color-bg);
+}
+
+
+.mark-container {
+    display: flex;
+}
+
+.education-card span {
+    color: var(--color-text-transparent);
+}
