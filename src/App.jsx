@@ -53,7 +53,7 @@ function App() {
       :
       <div className='cont-cont'>
         <Header />
-        <MainPage stars={stars.slice(0, 30)}/>
+        <MainPage stars={stars.slice(0, 15)}/>
       </div >}
     </>
   )
