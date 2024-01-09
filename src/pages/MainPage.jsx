@@ -9,6 +9,7 @@ export default function MainPage({stars}) {
         <div className="content-container">
             <HeroSection stars={stars}/>
             <AboutSection />
+            {/* <AboutSection /> */}
         </div>
     )
 }

@@ -6,7 +6,7 @@ import Header from './Components/Header'
 
 function App() {
   const [stars, setStars] = useState([]);
-  const [isLoading, setIsloading] = useState(true)
+  const [isLoading, setIsloading] = useState(false)
     
   useEffect(() => {
       function addStars() {
@@ -53,7 +53,7 @@ function App() {
       :
       <div className='cont-cont'>
         <Header />
-        <MainPage stars={stars}/>
+        <MainPage stars={stars.slice(0, 30)}/>
       </div >}
     </>
   )
