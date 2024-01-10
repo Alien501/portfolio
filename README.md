@@ -13,4 +13,4 @@
   Built in React with Vite.
 
   ### Start server
-      `npm run dev`
+      npm run dev
