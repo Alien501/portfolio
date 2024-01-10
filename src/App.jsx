@@ -38,7 +38,7 @@ function App() {
       () => {
         setIsloading(false)
       },
-      20000
+      11111
     )
   return (
     <>
