@@ -1,0 +1,46 @@
+.fab-container {
+    position: fixed;
+    z-index: 90;
+    height: 50px;
+    width: 50px;
+    background: red;
+    bottom: 10px;
+    right: 10px;
+    padding: 10px;
+    border-radius: 50%;
+    background-color: var(--color-bg-dark-transparent);
+    border: 2px solid var(--color-text-bright);
+    box-shadow: 0px 0px 5px var(--color-bg-dark);
+    transition: .3s ease;
+    overflow: hidden;
+    animation: fadeUp .8s ease 0s 1  ;
+}
+
+.fab-container .rocket {
+    width: 45px;
+    height: 45px;
+    transition: 1s ease-out;
+}
+
+.fab-container:hover {
+    scale: .8;
+}
+
+.fab-container:hover .rocket {
+    transform: translate3d(0px, 10px, 0px);
+    
+}
+
+.fab-container:active .rocket {
+    transform: translate3d(0px, -100vh, 0px);
+}
+
+@keyframes fadeUp {
+    0% {
+        transform: translate3d(0, 50px, 0);
+        opacity: 0;
+    } 100% {
+        transform: translate3d(0, 0px, 0);
+        opacity: 1;   
+    }
+}

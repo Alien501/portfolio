@@ -32,12 +32,11 @@ export default function HeroSection({stars}){
                         () => {
                             gsap.fromTo(`.star${i}`,
                             {
-
+                                opacity: 0.3
                             }
                             ,{
                                 opacity: 0.9,
                                 duration: 0.8,
-                                opacity: 0.3,
                                 delay: Math.random()*2,
                                 yoyo: true,
                                 repeat: -1

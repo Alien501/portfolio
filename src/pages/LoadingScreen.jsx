@@ -41,12 +41,11 @@ export default function LoadingScreen({stars}) {
                         () => {
                             gsap.fromTo(`.star${i}`,
                             {
-
+                                opacity: 0.3
                             }
                             ,{
                                 opacity: 0.9,
                                 duration: 0.8,
-                                opacity: 0.3,
                                 delay: Math.random()*2,
                                 yoyo: true,
                                 repeat: -1
@@ -99,10 +98,7 @@ export default function LoadingScreen({stars}) {
             <img src={RokcetImg} alt="Rocket" className="rocket" />
             {stars}
             <div className="loading-text">
-                Somewhere in this
-                <div>
-                    Universe...
-                </div>          
+                Loading...        
             </div>
         </div>
     )

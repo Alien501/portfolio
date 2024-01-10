@@ -26,7 +26,7 @@
 .star {
     position: absolute;
     display: block;
-    background-color: #fff;
+    background-color: hsl(216, 100%, 83%);
     border-radius: 50%;
     left: 0;
     right: 0;
