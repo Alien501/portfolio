@@ -4,7 +4,6 @@ import RokcetImg from '../assets/rocket.svg'
 
 import { useRef } from "react";
 import gsap from "gsap";
-import { useGSAP } from "@gsap/react";
 
 import './LoadingScreen.css'
 
