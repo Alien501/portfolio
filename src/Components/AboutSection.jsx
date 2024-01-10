@@ -3,6 +3,7 @@ import gsap from "gsap";
 
 import './AboutSection.css'
 import Rover from '../assets/rover.svg';
+import Resume from '../assets/Resume (1).pdf'
 
 export default function AboutSection() {
     const hero = useRef();
@@ -52,8 +53,9 @@ export default function AboutSection() {
                  <img src={Rover} className="rover" alt="" />
                     <h1>About</h1>
                     <p>
-                        I am Vignesh, a skilled web developer proficient in <b>Python, C, Java, JavaScript, HTML, CSS, NodeJs</b> and <b>React.js</b>. With a strong foundation in <b>Django, SQL</b> and <b>Git</b>. Certified in <b>Software Testing</b> and <b>Python</b>, I bring a commitment to quality and innovation. My expertise extends to MongoDB, and I am well-versed in tools like <b>VS Code, Figma</b> and <b>Adobe suite</b>.
+                        A skilled web developer proficient in <b>Python, C, Java, JavaScript, HTML, CSS, NodeJs</b> and <b>React.js</b>. With a strong foundation in <b>Django, SQL</b> and <b>Git</b>. Certified in <b>Software Testing</b> and <b>Python</b>, I bring a commitment to quality and innovation. My expertise extends to MongoDB, and I am well-versed in tools like <b>VS Code, Figma</b> and <b>Adobe suite</b>.
                     </p>
+                    <a href={Resume} target="_" className="resume">Resume</a>
                 </div>
         </div>
     )

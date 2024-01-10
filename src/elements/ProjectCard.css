@@ -1,0 +1,111 @@
+.project-card-container {
+    width: 270px;
+    height: 470px;
+    overflow: hidden;
+    border-radius: 10px;
+    border: 2px solid transparent;
+    margin: 15px auto;
+}
+
+.project-image-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.project-image-container::after {
+    content: '';
+    position: absolute;
+    left: 0; top: 0;
+    width: 100%; height: 100%;
+    background: linear-gradient(rgba(0, 0, 0, 0.1)  0%,
+    rgba(0, 0, 0, 0.1) 0%,
+    rgba(21, 20, 96, 0.6) 50%,
+    rgba(3, 0, 53, 0.9) 100%);
+
+}
+
+.project-image {
+    transition: .3s ease;
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+}
+
+.project-title {
+    position: relative;
+    top: -45px;
+    left: 15px;
+    font-size: 1.4rem;
+    letter-spacing: .1rem;
+    font-weight: 500;
+    color: var(--color-text-bright);
+    z-index: 70;
+}
+
+.project-card-container:hover {
+    cursor: pointer;
+    border-color: var(--color-text-normal);
+}
+
+.project-card-container:hover .project-image {
+    scale: 1.05;
+}
+
+.project-detail-container {
+    background-color: #130d5fc2;
+    width: 270px;
+    height: 470px;
+    padding: 10px;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 77;
+    color: var(--color-text-bright);
+    text-align: center;
+    position: relative;
+    z-index: 80;
+    transition: .3s ease;
+    /* transform: translate3d(0, 0px, 0); */
+}
+
+.project-description {
+    font-size: 1.2rem;
+    line-height: 1.6rem;
+    letter-spacing: .1rem;
+    user-select: none;
+}
+.project-btn {
+    display: block;
+    text-decoration: none;
+    color: black;
+    background-color: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    margin: 10px auto;
+    font-size: .9rem;
+    font-weight: 500;
+    transition: .3s ease;
+}
+
+.git-btn {
+    background-color: black;
+    color: #fff;
+}
+
+.git-btn:hover {
+    background-color: #fff;
+    color: black;
+}
+
+.site-btn {
+    background-color: rgb(0, 145, 255);
+    color: rgb(1, 1, 60);
+}
+
+.site-btn:hover {
+    background-color: rgb(1, 1, 60);
+    color: rgb(0, 145, 255);
+}

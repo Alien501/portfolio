@@ -102,7 +102,7 @@ export default function LoadingScreen({stars}) {
             <div className="loading-text">
                 Somewhere in this
                 <div>
-                    Universe
+                    Universe...
                 </div>          
             </div>
         </div>

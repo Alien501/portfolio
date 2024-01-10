@@ -4,6 +4,7 @@ import './MainPage.css'
 import HeroSection from "../Components/HeroSection";
 import AboutSection from "../Components/AboutSection";
 import EducationSection from "../Components/EducationSection";
+import ProjectSection from "../Components/ProjectSection";
 
 export default function MainPage({stars}) {
     return(
@@ -11,6 +12,7 @@ export default function MainPage({stars}) {
             <HeroSection stars={stars}/>
             <AboutSection />
             <EducationSection />
+            <ProjectSection />
         </div>
     )
 }

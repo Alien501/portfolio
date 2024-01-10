@@ -1,0 +1,28 @@
+#project-section {
+    width: 100%;
+    height: max-content;
+    background-color: var(--color-bg-transparent);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#project-head {
+    display: block;
+    font-size: 2.8rem;
+    font-weight: bold;
+    color: var(--color-text-normal);
+    text-shadow: 2px 2px 1px var(--color-bg-dark),
+                2px 2px 1px var(--color-bg-dark-transparent),
+                2px 2px 1px var(--color-bg-dark-transparent),
+                2px 2px 1px var(--color-bg-dark);
+}
+
+.project-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+    flex-wrap: wrap;
+}
