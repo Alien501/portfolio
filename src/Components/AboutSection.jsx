@@ -52,7 +52,7 @@ export default function AboutSection() {
                 <div className="about-container">
                  <img src={Rover} className="rover" alt="" />
                     <h1  data-aos="fade-down" data-aos-duration="200" data-aos-easing="ease-in-out" >About</h1>
-                    <p data-aos="fade-in" data-aos-duration="300" data-aos-easing="ease-in-out" >
+                    <p>
                         A skilled web developer proficient in <b>Python, C, Java, JavaScript, HTML, CSS, NodeJs</b> and <b>React.js</b>. With a strong foundation in <b>Django, SQL</b> and <b>Git</b>. Certified in <b>Software Testing</b> and <b>Python</b>, I bring a commitment to quality and innovation. My expertise extends to MongoDB, and I am well-versed in tools like <b>VS Code, Figma</b> and <b>Adobe suite</b>.
                     </p>
                     <a href={Resume} target="_" className="resume">Resume</a>
