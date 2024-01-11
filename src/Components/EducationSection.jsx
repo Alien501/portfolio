@@ -7,7 +7,7 @@ export default function EducationSection(){
 
     return(
         <div id="education-section">
-            <div className="education-heading">Education</div>
+            <div data-aos="fade-down" data-aos-duration="200" data-aos-easing="ease-in-out" className="education-heading">Education</div>
 
             <div className="education-detail-container">
                 <EducationCard

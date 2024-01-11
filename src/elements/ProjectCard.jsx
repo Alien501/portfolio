@@ -10,7 +10,7 @@ export default function ProjectCard({project_title, project_link, git_link, proj
     }
 
     return(
-        <div className="project-card-container" onClick={onCardClick}>
+        <div data-aos="fade-right" data-aos-duration="400" data-aos-easing="ease-in-out" className="project-card-container" onClick={onCardClick}>
             <div className="project-image-container project-content">
                 <img src={project_image[0]} alt="Project Image" className="project-image" />
                 <div className="project-title">

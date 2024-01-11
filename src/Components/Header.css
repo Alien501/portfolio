@@ -11,6 +11,7 @@
     align-items: center;
     z-index: 95;
     background-color: var(--color-bg-dark-transparent);
+    animation: fadeDown .6s ease-in 0s 1  ;
 }
 
 .filter-layer {
@@ -68,6 +69,14 @@
 
 .header-icon-container:active .icon-head {
     scale: 0.8;
+}
+
+@keyframes fadeDown {
+    0% {
+        transform: translate3d(0, -40vh, 0);
+    } 100% {
+        transform: translate3d(0, 0, 0);
+    }
 }
 
 /* Menu */
