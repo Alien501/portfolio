@@ -9,7 +9,7 @@ import port2 from '../assets/this_portrait.png'
 export default function ProjectSection() {
     return(
         <div id="project-section">
-            <div data-aos="fade-down" data-aos-duration="200" data-aos-easing="ease-in-out" id="project-head">Projects</div>
+            <div id="project-head">Projects</div>
             <div className="project-container">
                 <ProjectCard
                     project_title={'LRC Get'}

@@ -1,8 +1,6 @@
 import React, { useEffect, useLayoutEffect, useRef} from "react";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
-import AOS from 'aos';
-import 'aos/dist/aos.css';
 
 import './HeroSection.css'
 import SoCalledEarth from '../assets/planet earth.svg'
@@ -53,10 +51,6 @@ export default function HeroSection({stars}){
             }
 
     });
-
-    useEffect(() => {
-        AOS.init();
-    }, []);
 
 
     return(

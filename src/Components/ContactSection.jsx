@@ -112,9 +112,9 @@ export default function ContactSection() {
 
     return(
         <div id="contact-section">
-            <div data-aos="fade-down" data-aos-duration="200" data-aos-easing="ease-in-out" id="contact-head">Contact Me</div>
+            <div id="contact-head">Contact Me</div>
             <img src={ufo} alt="UFO Illustration" className="ufo" />
-            <div data-aos="fade-up" data-aos-duration="300" data-aos-easing="ease-in-out" className="contact-form-container">
+            <div className="contact-form-container">
                 <input type="text" value={formData.name} name="name" id="name" placeholder="Name" required onChange={onChange}/>
                 <input type="email" value={formData.email} name="email" id="email" placeholder="Mail" required onChange={onChange}/>
                 <textarea type="text" value={formData.response} name="response" id="response" placeholder="Your thoughts..." onChange={onChange} required/>
