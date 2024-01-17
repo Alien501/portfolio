@@ -26,20 +26,27 @@ export default function ContactSection() {
     }
 
     async function onSubmit(event) {
+        const fo = document.querySelector('form');
         event.preventDefault();
-        if(formData.name == '' && formData.email == '' && formData.response == '') return;
-        console.log(formData);
+        if(formData.name == '' || formData.email == '' || formData.response == '') {
+            alert('Fill all fields!')
+            return
+        };
+        const f = new FormData(fo);
         setisSubmitted(true);
         try {
             const res = await fetch(
-                'https://script.google.com/macros/s/AKfycbykpyh5EltQqbJfTxtF5sa4t7BE9113bXsNjKVs5_6d753JZIXYUE0yJUtvXyGNMGCu/exec',
+                'https://script.google.com/macros/s/AKfycbyXnvWBctTilJ4Hg_7fNfc8u9QpAliiU18CiHy0veP08VBwZmGU55zQQ3klMgOZcF0uAw/exec',
                 {
                     method: 'POST',
-                    body: formData
+                    body: f
                 }
             )
+
+            console.log(res);
             if(res.ok){
                 const data = await res.json();
+                console.log(data);
                 setFormData(prev => {
                     return {
                         name: '',
@@ -49,10 +56,10 @@ export default function ContactSection() {
                 })
                 alert('Your response has been submitted successfully!');
             }else{
-                alert('Something went wrong, couldn\'t submit your request!')
+                alert('Something went wrong, couldn\'t submit your request! 1')
             }
         }catch(e) {
-            alert('Something went wrong, couldn\'t submit your request!')
+            alert('Something went wrong, couldn\'t submit your request! 2')
         }
         setisSubmitted(false)
     }
@@ -114,13 +121,19 @@ export default function ContactSection() {
         <div id="contact-section">
             <div id="contact-head">Contact Me</div>
             <img src={ufo} alt="UFO Illustration" className="ufo" />
-            <div className="contact-form-container">
-                <input type="text" value={formData.name} name="name" id="name" placeholder="Name" required onChange={onChange}/>
-                <input type="email" value={formData.email} name="email" id="email" placeholder="Mail" required onChange={onChange}/>
-                <textarea type="text" value={formData.response} name="response" id="response" placeholder="Your thoughts..." onChange={onChange} required/>
+            <form name="mf">
+                <div className="contact-form-container">
+                    <input type="text" value={formData.name} name="name" id="name" placeholder="Name" required onChange={onChange}/>
+                    <input type="email" value={formData.email} name="email" id="email" placeholder="Mail" required onChange={onChange}/>
+                    <textarea type="text" value={formData.response} name="response" id="response" placeholder="Your thoughts..." onChange={onChange} required/>
 
-                {!isSubmitted && <button className="submit" onClick={onSubmit}>Submit</button>}
-            </div>
+                    {
+                        (isSubmitted)?
+                        <button disabled className="submit" onClick={onSubmit}>Submitting</button>:
+                        <button className="submit" onClick={onSubmit}>Submit</button>
+                    }
+                </div>
+            </form>
         </div>
     )
 }

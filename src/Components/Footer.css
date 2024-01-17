@@ -20,10 +20,6 @@
     user-select: none;
 }
 
-#footer-container span:hover {
-    border-bottom: 2px solid var(--color-text-normal);
-    cursor: pointer;
-}
 
 .footer-menu {
     display: flex;
@@ -34,12 +30,26 @@
     text-decoration: none;
     color: var(--color-text-normal);
     border: 2px solid transparent;
+    transition: .3s ease;
 }
 
 .footer-menu span {
-    display: block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
 }
 
 .social-link-container {
     display: flex;
+}
+
+.footer-menu:hover {
+    cursor: pointer;
+    color: var(--color-bg-transparent);
+}
+
+.footer-menu:hover span {
+    background-color: var(--color-text-normal);
+    border-radius: 50%;
 }

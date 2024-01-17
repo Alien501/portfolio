@@ -20,9 +20,14 @@
                 2px 2px 1px var(--color-bg-dark);
 }
 
-.contact-form-container {
+form {
     width: 85%;
     height: 50%;
+    display: block;
+    margin: 0px auto 20px auto;
+}
+
+.contact-form-container {
     display: flex;
     justify-content: center;
     align-items: center;
