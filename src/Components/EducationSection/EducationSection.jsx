@@ -1,7 +1,7 @@
 import React from "react";
 
 import './EducationSection.css'
-import EducationCard from "../elements/EducationCard";
+import EducationCard from "../../elements/EducationCard/EducationCard";
 
 export default function EducationSection(){
 

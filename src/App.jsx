@@ -1,14 +1,14 @@
-import { useState, useEffect } from 'react'
+import { useState, useLayoutEffect } from 'react'
 import './App.css'
-import LoadingScreen from './pages/LoadingScreen'
-import MainPage from './pages/MainPage';
-import Header from './Components/Header'
+import LoadingScreen from './pages/LoadingScreen/LoadingScreen'
+import MainPage from './pages/MainPage/MainPage';
+import Header from './Components/Header/Header'
 
 function App() {
   const [stars, setStars] = useState([]);
-  const [isLoading, setIsloading] = useState(true)
+  const [isLoading, setIsloading] = useState(true);
     
-  useEffect(() => {
+  useLayoutEffect(() => {
       function addStars() {
         const newStars = [];
   

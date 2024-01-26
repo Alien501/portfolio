@@ -2,7 +2,7 @@ import React from "react";
 
 import './FAB.css'
 
-import rocket from '../assets/rocket fire.svg'
+import rocket from '../../assets/rocket fire.svg'
 
 export default function FAB() {
     return(

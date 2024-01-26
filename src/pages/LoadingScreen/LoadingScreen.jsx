@@ -1,6 +1,5 @@
-import React, { useEffect, useLayoutEffect, useState } from "react";
-
-import RokcetImg from '../assets/rocket.svg'
+import React, { useLayoutEffect } from "react";
+import RokcetImg from '../../assets/rocket.svg'
 
 import { useRef } from "react";
 import gsap from "gsap";

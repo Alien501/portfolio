@@ -2,13 +2,13 @@ import React, { useEffect, useState } from "react";
 
 import './MainPage.css'
 
-import HeroSection from "../Components/HeroSection";
-import AboutSection from "../Components/AboutSection";
-import EducationSection from "../Components/EducationSection";
-import ProjectSection from "../Components/ProjectSection";
-import ContactSection from "../Components/ContactSection";
-import Footer from "../Components/Footer";
-import FAB from "../elements/FAB";
+import HeroSection from "../../Components/HeroSection/HeroSection";
+import AboutSection from "../../Components/AboutSection/AboutSection";
+import EducationSection from "../../Components/EducationSection/EducationSection";
+import ProjectSection from "../../Components/ProjectSection/ProjectSection";
+import ContactSection from "../../Components/ContactSection/ContactSection";
+import Footer from "../../Components/Footer/Footer";
+import FAB from "../../elements/FAB/FAB";
 
 export default function MainPage({stars}) {
     const [isScrolled, setIsScrolled] = useState(false);

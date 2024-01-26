@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-import Sat from '../assets/sat 1.svg'
+import Sat from '../../assets/sat 1.svg'
 
 import './Header.css'
 

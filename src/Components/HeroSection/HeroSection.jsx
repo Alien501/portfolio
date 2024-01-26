@@ -3,8 +3,8 @@ import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 
 import './HeroSection.css'
-import SoCalledEarth from '../assets/planet earth.svg'
-import Satellite from '../assets/sat 2.svg'
+import SoCalledEarth from '../../assets/planet earth.svg'
+import Satellite from '../../assets/sat 2.svg'
 
 export default function HeroSection({stars}){
     const sat = useRef();

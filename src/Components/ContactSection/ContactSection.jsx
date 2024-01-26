@@ -1,7 +1,7 @@
 import React, { useLayoutEffect, useState } from "react";
 import gsap from "gsap";
 import './ContactSection.css'
-import ufo from '../assets/ufo 2.svg'
+import ufo from '../../assets/ufo 2.svg'
 
 
 export default function ContactSection() {

@@ -2,8 +2,8 @@ import React, { useEffect, useLayoutEffect, useRef } from "react";
 import gsap from "gsap";
 
 import './AboutSection.css'
-import Rover from '../assets/rover.svg';
-import Resume from '../assets/Resume (1).pdf'
+import Rover from '../../assets/rover.svg';
+import Resume from '../../assets/Resume (1).pdf'
 
 export default function AboutSection() {
     const hero = useRef();
@@ -24,34 +24,28 @@ export default function AboutSection() {
         }
     }, [])
 
-    useLayoutEffect(() => {
-        let ctx = gsap.context(
-            () => {
-                gsap.fromTo(
-                    '.rover',
-                    {
-                        transform: 'translate3d(-39vw, 0, 0)'
-                    },{
-                        transform: 'translate3d(40vw, 0, 0)',
-                        duration: 10,
-                        repeat: -1,
-                        yoyo: true,
-                        ease: 'back.inOut',
-                        onComplete: () => {
-                            gsap.set('.rover', {rotationY: 180})
-                        }
-                    }
-                )
+    useEffect( () => {
+        const rover = document.querySelector('.rover');
+        let per = 0;
+        const animateRover = (e) => {
+            var scrollPercentage = -1*(window.scrollY / (rover.scrollHeight - window.innerHeight)) * 100;
+            if(scrollPercentage >= 20 && scrollPercentage <= 84){
+                rover.style.transform = `translate3d(${scrollPercentage}vw, 0, 0)`
             }
-        )
-        return () => ctx.revert();
-    })
+        } 
+
+        window.addEventListener('scroll', animateRover);
+
+        return () => {
+            window.removeEventListener('scroll', animateRover);
+        }
+    }, [])
 
     return(
         <div ref={hero} id="about-section">
+                <h1>About</h1>
+                <img src={Rover} className="rover" />
                 <div className="about-container">
-                 <img src={Rover} className="rover" alt="" />
-                    <h1>About</h1>
                     <p>
                         A skilled web developer proficient in <b>Python, C, Java, JavaScript, HTML, CSS, NodeJs</b> and <b>React.js</b>. With a strong foundation in <b>Django, SQL</b> and <b>Git</b>. Certified in <b>Software Testing</b> and <b>Python</b>, I bring a commitment to quality and innovation. My expertise extends to MongoDB, and I am well-versed in tools like <b>VS Code, Figma</b> and <b>Adobe suite</b>.
                     </p>

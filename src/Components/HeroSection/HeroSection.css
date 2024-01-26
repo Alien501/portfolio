@@ -63,13 +63,13 @@
 
 @keyframes rotatePlanet {
     0% {
-        transform: rotate(0deg);
+        transform: rotate3d(0, 0, 1, 0deg);
     }
     50% {
-        transform: rotate(180deg);
+        transform: rotate3d(0, 0, 1, 180deg);
     }
     to {
-        transform: rotate(360deg);
+        transform: rotate3d(0, 0, 1, 360deg);
     }
 }
 

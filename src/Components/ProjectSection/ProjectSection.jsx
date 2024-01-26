@@ -1,10 +1,10 @@
 import React from "react";
 
 import './ProjectSection.css'
-import ProjectCard from "../elements/ProjectCard";
+import ProjectCard from "../../elements/ProjectCard/ProjectCard";
 
-import lrcImage2 from '../assets/lrc_get_portrait.png'
-import port2 from '../assets/this_portrait.png'
+import lrcImage2 from '../../assets/lrc_get_portrait.png'
+import port2 from '../../assets/this_portrait.png'
 
 export default function ProjectSection() {
     return(
