@@ -6,7 +6,7 @@ import Header from './Components/Header/Header'
 
 function App() {
   const [stars, setStars] = useState([]);
-  const [isLoading, setIsloading] = useState(false);
+  const [isLoading, setIsloading] = useState(true);
     
   useLayoutEffect(() => {
       function addStars() {
