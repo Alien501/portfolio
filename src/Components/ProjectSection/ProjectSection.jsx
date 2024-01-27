@@ -5,6 +5,7 @@ import ProjectCard from "../../elements/ProjectCard/ProjectCard";
 
 import lrcImage2 from '../../assets/lrc_get_portrait.png'
 import port2 from '../../assets/this_portrait.png'
+import i5 from '../../assets/i5.avif'
 
 export default function ProjectSection() {
     return(
@@ -25,6 +26,14 @@ export default function ProjectSection() {
                     git_link={'https://github.com/Alien501/portfolio'}
                     project_desc={'My personal portfolio website, The one currently you are in :-).'}
                     project_image={[port2]}
+                />
+
+                <ProjectCard
+                    project_title={'I5 Academy'}
+                    project_link={'https://i5-academy.vercel.app/'}
+                    git_link={''}
+                    project_desc={'A simple and minimalistic blog site made for a client.'}
+                    project_image={[i5]}
                 />
             </div>
         </div>

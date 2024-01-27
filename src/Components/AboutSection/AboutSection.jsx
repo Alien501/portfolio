@@ -1,5 +1,4 @@
 import React, { useEffect, useLayoutEffect, useRef } from "react";
-import gsap from "gsap";
 
 import './AboutSection.css'
 import Rover from '../../assets/rover.svg';

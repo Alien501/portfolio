@@ -33,6 +33,7 @@
     animation-duration: 2s;
     animation-iteration-count: infinite;
     animation-timing-function: ease;
+    animation-direction: alternate-reverse;
     border: 2px solid hsla(0, 0%, 36%, 0.5);
     padding: 10px;
     flex-direction: column;
@@ -101,13 +102,13 @@
 
 
 @keyframes rotate {
-    0%{
+    0% {
         border-top-color: hsl(216, 100%, 84%);
     } 25% {
         border-right-color: hsl(216, 100%, 84%);
     } 50% {
         border-bottom-color: hsl(216, 100%, 84%);
-    } 75% {
+    } 75%{
         border-left-color: hsl(216, 100%, 84%);
-    } 
+    }
 }
