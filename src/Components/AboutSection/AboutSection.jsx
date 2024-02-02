@@ -25,11 +25,10 @@ export default function AboutSection() {
 
     useEffect( () => {
         const rover = document.querySelector('.rover');
-        let per = 0;
         const animateRover = (e) => {
             var scrollPercentage = -1*(window.scrollY / (rover.scrollHeight - window.innerHeight)) * 100;
-            if(scrollPercentage >= 20 && scrollPercentage <= 84){
-                rover.style.transform = `translate3d(${scrollPercentage}vw, 0, 0)`
+            if(scrollPercentage >= 20 && scrollPercentage <= 86){
+                rover.style.transform = `translate3d(${scrollPercentage-10}vw, 0, 0)`
             }
         } 
 

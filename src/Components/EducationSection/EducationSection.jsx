@@ -1,9 +1,27 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 
 import './EducationSection.css'
 import EducationCard from "../../elements/EducationCard/EducationCard";
 
 export default function EducationSection(){
+    const bgPattern = useRef(null);
+
+    useEffect(() => {
+        const eb = document.getElementById('education-section')
+        if (!bgPattern.current) return;
+        const updateBg = (event) => {
+            const {clientX, clientY} = event;
+            
+            bgPattern.current.style.setProperty('--x', `${Math.floor((clientX/window.innerWidth)*100)}%`);
+            bgPattern.current.style.setProperty('--y', `${Math.floor((clientY/window.innerHeight)*100)}%`);
+        }
+
+        eb.addEventListener('mousemove', updateBg);
+    
+        return () => {
+            eb.removeEventListener('mousemove', updateBg);
+        }
+    }, [])
 
     return(
         <div id="education-section">
@@ -25,6 +43,7 @@ export default function EducationSection(){
                     year={2026}
                 />
             </div>
+            <div ref={bgPattern} className="background-pattern"></div>
         </div>
     )
 }

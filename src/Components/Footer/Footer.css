@@ -16,10 +16,15 @@
 }
 
 #footer-container p{
+    display: block;
     padding: 5px;
+    overflow: hidden;
     user-select: none;
 }
 
+#footer-container p:hover {
+    cursor: pointer;
+}
 
 .footer-menu {
     display: flex;
@@ -52,4 +57,23 @@
 .footer-menu:hover span {
     background-color: var(--color-text-normal);
     border-radius: 50%;
+}
+
+#footer-container p::after {
+    display: block;
+    position: relative;
+    left: 0;
+    content: '';
+    height: 2px;
+    width: 100%;
+    background-color: var(--color-text-bright);
+    scale: 0;
+    transition: .4s ease;
+    border-radius: 4px;
+}
+
+#footer-container p:hover::after {
+    scale: 1;
+    /* width: 100%; */
+    cursor: pointer;
 }

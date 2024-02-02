@@ -49,7 +49,6 @@ export default function HeroSection({stars}){
             return () => {
                 contexts.forEach((ctx) => ctx.revert());
             }
-
     });
 
 

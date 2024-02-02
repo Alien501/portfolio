@@ -1,4 +1,6 @@
 import { useState, useLayoutEffect } from 'react'
+import { Analytics } from '@vercel/analytics/react';
+
 import './App.css'
 import LoadingScreen from './pages/LoadingScreen/LoadingScreen'
 import MainPage from './pages/MainPage/MainPage';
@@ -55,6 +57,7 @@ function App() {
         <Header />
         <MainPage stars={stars.slice(0, 15)}/>
       </div >}
+      <Analytics />
     </>
   )
 }

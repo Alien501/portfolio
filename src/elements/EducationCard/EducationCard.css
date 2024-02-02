@@ -15,6 +15,37 @@
     scale: 0.9;
     overflow: hidden;
     perspective: 500px;
+    z-index: 10;
+}
+
+.education-card::after {
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 40px;
+    top: 0;
+    left: -120%;
+    background-color: rgba(144, 144, 231, 0.244);
+    z-index: 5;
+    transform: skew(-15deg);
+    animation: shinemove 8s cubic-bezier(0,1.1,1,.13) 0s infinite;
+}
+
+@keyframes shinemove {
+    0% {
+        left: -1000%;
+    }
+    100% {
+        left: 1000%;
+    }
+}
+
+.education-card::after:nth-child(even) {
+    animation-delay: 5s;
+}
+  
+.education-card::after:nth-child(odd) {
+    animation-delay: 10s;
 }
 
 .education-card:hover {
@@ -24,11 +55,13 @@
     box-shadow: 0px 5px 10px var(--color-bg);
 }
 
-
 .mark-container {
+    z-index: 10;
     display: flex;
 }
 
 .education-card span {
+    z-index: 10;
+
     color: var(--color-text-transparent);
 }
