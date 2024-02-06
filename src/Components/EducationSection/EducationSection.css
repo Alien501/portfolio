@@ -51,7 +51,7 @@
 .background-pattern {
     --x: 0%;
     --y: 0%;
-    background-image: radial-gradient(var(--color-text-bright) 10%, transparent 5%);
+    background-image: radial-gradient(#7d74ff3f 12%, transparent 5%);
     background-position: var(--x) var(--y);
     background-size: 5vmin 5vmin;
     height: 100vh;
@@ -69,12 +69,11 @@
 
 @keyframes blink {
     to {
-    background-image: radial-gradient(var(--color-text-normal) 10%, transparent 5%);
+    background-image: radial-gradient(#6156ff3f 12%, transparent 5%);
     }
 }
 
 .education-detail-container:hover + .background-pattern {
     opacity: 0.2;
     background-size: 10vmin 10vmin;
-    filter: blur(2px);
 }

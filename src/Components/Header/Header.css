@@ -15,13 +15,12 @@
 }
 
 .filter-layer {
-    background-color: var(--color-bg-transparent, #02001C);
     height: 100%;
     left: 0;
     right: 0;
     position: absolute;
     z-index: 96;
-    filter: blur(8px);
+    filter: blur(10px);
 }
 
 .content-layer {

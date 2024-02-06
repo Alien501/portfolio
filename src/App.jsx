@@ -57,7 +57,7 @@ function App() {
         <Header />
         <MainPage stars={stars.slice(0, 15)}/>
       </div >}
-      <Analytics />
+      {/* <Analytics /> */}
     </>
   )
 }

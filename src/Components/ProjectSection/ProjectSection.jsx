@@ -5,6 +5,7 @@ import ProjectCard from "../../elements/ProjectCard/ProjectCard";
 
 import lrcImage2 from '../../assets/lrc_get_portrait.png'
 import port2 from '../../assets/this_portrait.png'
+import syncPlay from '../../assets/sync-play.png'
 import i5 from '../../assets/i5.avif'
 
 export default function ProjectSection() {
@@ -29,12 +30,20 @@ export default function ProjectSection() {
                 />
 
                 <ProjectCard
+                    project_title={'Sync Play'}
+                    project_link={'https://sync-play-nu.vercel.app/signin'}
+                    git_link={'https://github.com/Alien501/sync-play'}
+                    project_desc={'A simple site made to upload offline music playlist to Spotify with ease.[Note: Still under beta and not available for mass. Maybe soon :-)]'}
+                    project_image={[syncPlay]}
+                />
+
+                {/* <ProjectCard
                     project_title={'I5 Academy'}
                     project_link={'https://i5-academy.vercel.app/'}
                     git_link={''}
                     project_desc={'A simple and minimalistic blog site made for a client.'}
                     project_image={[i5]}
-                />
+                /> */}
             </div>
         </div>
     )

@@ -12,7 +12,9 @@ export default function Header() {
     }
 
     return(
-        <nav className="header-container">
+        <nav className="header-container" style={{
+            backgroundColor: isClicked? 'var(--color-bg-dark, #010128)': 'var(--color-bg-dark-transparent)'
+        }}>
             <div className="filter-layer">
 
             </div>

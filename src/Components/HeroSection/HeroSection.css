@@ -98,7 +98,6 @@
     position: absolute;
     display: block;
     background-color: hsl(216, 100%, 83%);
-    opacity: 0;
     border-radius: 50%;
     left: 0;
     right: 0;
