@@ -15,7 +15,7 @@ export default function MainPage({stars}) {
 
     useEffect(() => {
         const s = (e) => {
-            if(window.scrollY > window.innerHeight) {
+            if(window.scrollY > window.innerHeight-100) {
                 setIsScrolled(true)
             }else if(window.scrollY < window.innerHeight) {
                 setIsScrolled(false)
@@ -36,7 +36,7 @@ export default function MainPage({stars}) {
             <EducationSection />
             <ProjectSection />
             <ContactSection />
-            {isScrolled && <FAB />}
+            <FAB isScrolled={isScrolled}/>
             <Footer />
         </div>
     )

@@ -5,10 +5,11 @@ import Rover from '../../assets/rover.svg';
 import Resume from '../../assets/Resume (1).pdf'
 
 export default function AboutSection() {
-    const hero = useRef();
-
-    const bg = document.querySelector('#about-section')
+    const hero = useRef(null);
+    
     useEffect( () => {
+    
+        const bg = document.getElementById('about-section')
         if(!hero.current) return;
         const updateMousePosition = (e) => {
             const { clientX, clientY } = e;
@@ -16,10 +17,10 @@ export default function AboutSection() {
             hero.current.style.setProperty('--y', `${clientY}px`);
         }
 
-        window.addEventListener('mousemove', updateMousePosition);
+        bg.addEventListener('mousemove', updateMousePosition);
 
         return () => {
-            window.removeEventListener('mousemove', updateMousePosition)
+            bg.removeEventListener('mousemove', updateMousePosition)
         }
     }, [])
 
