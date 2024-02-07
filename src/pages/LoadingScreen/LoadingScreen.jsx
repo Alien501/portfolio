@@ -1,7 +1,7 @@
 import React, { useLayoutEffect } from "react";
 import RokcetImg from '../../assets/rocket.svg'
 
-import { useRef } from "react";
+import { useRef, useEffect } from "react";
 import gsap from "gsap";
 
 import './LoadingScreen.css'
@@ -57,6 +57,11 @@ export default function LoadingScreen({stars}) {
 
     })
 
+    useEffect(() => {
+        const p = document.getElementById('rect');
+        p.setAttribute('x', '0%');
+    }, [])
+
     useLayoutEffect(() => {
         const contexts = [];
         
@@ -93,7 +98,17 @@ export default function LoadingScreen({stars}) {
             <img src={RokcetImg} alt="Rocket" className="rocket" />
             {stars}
             <div className="loading-text">
-                Loading...        
+                <svg className="load-text"  width="150px" textRendering='geometricPrecision' shapeRendering='geometricPrecision'>
+                    <pattern  id="pattern1" patternUnits="userSpaceOnUse" height="102.4" width="100%">
+                        <rect x="0" y="0" height="100%" width="0%" fill="hsl(216, 100%, 83%)"></rect>
+                        <rect style={{
+                        transition: 'x 12s ease'
+                    }} id="rect" x="-100%" y="0" height="100%" width="100%" fill="hsl(216, 100%, 83%)"></rect>
+                    </pattern>
+                    <text x="0" y="50%" fill="url(#pattern1)" className="load-main-text" dominantBaseline='middle'>
+                        Loading...
+                    </text>
+                </svg>
             </div>
         </div>
     )

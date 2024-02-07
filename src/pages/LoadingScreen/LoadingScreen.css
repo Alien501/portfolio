@@ -54,3 +54,11 @@
     text-align: center;
     user-select: none;
 }
+
+.load-text {
+    stroke: hsl(216, 100%, 83%);
+    stroke-width: .3px;
+    stroke-dasharray: 1, 4;
+    stroke-linecap: round;
+    font-size: 1.8rem;
+}
