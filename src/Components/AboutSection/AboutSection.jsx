@@ -44,11 +44,14 @@ export default function AboutSection() {
         <div ref={hero} id="about-section">
                 <h1>About</h1>
                 <img src={Rover} className="rover" />
-                <div className="about-container">
-                    <p>
-                        A skilled web developer proficient in <b>Python, C, Java, JavaScript, HTML, CSS, NodeJs</b> and <b>React.js</b>. With a strong foundation in <b>Django, SQL</b> and <b>Git</b>. Certified in <b>Software Testing</b> and <b>Python</b>, I bring a commitment to quality and innovation. My expertise extends to MongoDB, and I am well-versed in tools like <b>VS Code, Figma</b> and <b>Adobe suite</b>.
-                    </p>
-                    <a href={Resume} target="_" className="resume">Resume</a>
+                <div className="about-outer-cont">
+                    <div className="square"></div>
+                    <div className="about-container">
+                        <p>
+                            A skilled web developer proficient in <b>Python, C, Java, JavaScript, HTML, CSS, NodeJs</b> and <b>React.js</b>. With a strong foundation in <b>Django, SQL</b> and <b>Git</b>. Certified in <b>Software Testing</b> and <b>Python</b>, I bring a commitment to quality and innovation. My expertise extends to MongoDB, and I am well-versed in tools like <b>VS Code, Figma</b> and <b>Adobe suite</b>.
+                        </p>
+                        <a href={Resume} target="_" className="resume">Resume</a>
+                    </div>
                 </div>
         </div>
     )
