@@ -67,7 +67,7 @@ export default function HeroSection({stars}){
                 <img  src={SoCalledEarth} alt="Earth illustration" className="hero-image" />
             </div>
             <img  src={Satellite} alt="Satellite Illustration" className="satelite-image" />
-            {stars}
+                {stars}
         </div>
     )
 }

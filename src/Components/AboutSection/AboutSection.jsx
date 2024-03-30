@@ -50,7 +50,11 @@ export default function AboutSection() {
                         <p>
                             A skilled web developer proficient in <b>Python, C, Java, JavaScript, HTML, CSS, NodeJs</b> and <b>React.js</b>. With a strong foundation in <b>Django, SQL</b> and <b>Git</b>. Certified in <b>Software Testing</b> and <b>Python</b>, I bring a commitment to quality and innovation. My expertise extends to MongoDB, and I am well-versed in tools like <b>VS Code, Figma</b> and <b>Adobe suite</b>.
                         </p>
-                        <a href={Resume} target="_" className="resume">Resume</a>
+                        <a href={Resume} target="_" className="resume">
+                            <span>
+                                Resume
+                            </span>
+                        </a>
                     </div>
                 </div>
         </div>

@@ -6,22 +6,22 @@ import EducationCard from "../../elements/EducationCard/EducationCard";
 export default function EducationSection(){
     const bgPattern = useRef(null);
 
-    useEffect(() => {
-        const eb = document.getElementById('education-section')
-        if (!bgPattern.current) return;
-        const updateBg = (event) => {
-            const {clientX, clientY} = event;
+    // useEffect(() => {
+    //     const eb = document.getElementById('education-section')
+    //     if (!bgPattern.current) return;
+    //     const updateBg = (event) => {
+    //         const {clientX, clientY} = event;
             
-            bgPattern.current.style.setProperty('--x', `${Math.floor((clientX/window.innerWidth)*100)}%`);
-            bgPattern.current.style.setProperty('--y', `${Math.floor((clientY/window.innerHeight)*100)}%`);
-        }
+    //         bgPattern.current.style.setProperty('--x', `${Math.floor((clientX/window.innerWidth)*100)}%`);
+    //         bgPattern.current.style.setProperty('--y', `${Math.floor((clientY/window.innerHeight)*100)}%`);
+    //     }
 
-        eb.addEventListener('mousemove', updateBg);
+    //     eb.addEventListener('mousemove', updateBg);
     
-        return () => {
-            eb.removeEventListener('mousemove', updateBg);
-        }
-    }, [])
+    //     return () => {
+    //         eb.removeEventListener('mousemove', updateBg);
+    //     }
+    // }, [])
 
     return(
         <div id="education-section">
@@ -38,7 +38,7 @@ export default function EducationSection(){
                 <EducationCard
                     eduOrg={'Rajalakshmi Engineering College, Chennai'}
                     marks={[
-                        {'exam_title': 'CGPA*', 'exam_mark': '8.61'},
+                        {'exam_title': 'CGPA*', 'exam_mark': '8.33'},
                     ]}
                     year={2026}
                 />

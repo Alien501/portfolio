@@ -32,7 +32,7 @@ export default function ProjectSection() {
                 <ProjectCard
                     project_title={'Sync Play'}
                     project_link={'https://sync-play-nu.vercel.app/signin'}
-                    git_link={'https://github.com/Alien501/sync-play'}
+                    git_link={'https://github.com/Alien501/sync-play-template'}
                     project_desc={'A simple site made to upload offline music playlist to Spotify with ease.[Note: Still under beta and not available for mass. Maybe soon :-)]'}
                     project_image={[syncPlay]}
                 />
