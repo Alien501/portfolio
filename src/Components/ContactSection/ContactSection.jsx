@@ -91,7 +91,7 @@ export default function ContactSection() {
             }
         )
         return () => ctx.revert();
-    })
+    }, [])
 
 
     useLayoutEffect(() => {

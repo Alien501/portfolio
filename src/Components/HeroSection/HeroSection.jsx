@@ -1,6 +1,9 @@
 import React, { useEffect, useLayoutEffect, useRef} from "react";
+
 import { useGSAP } from "@gsap/react";
-import gsap from "gsap";
+import gsap from "gsap/gsap-core";
+
+import SplitType from "split-type";
 
 import './HeroSection.css'
 import SoCalledEarth from '../../assets/planet earth.svg'
@@ -8,7 +11,6 @@ import Satellite from '../../assets/sat 2.svg'
 
 export default function HeroSection({stars}){
     const sat = useRef();
-
 
     useGSAP(() => {
         gsap.fromTo('.satelite-image', {
@@ -21,6 +23,17 @@ export default function HeroSection({stars}){
             ease: 'power3.inOut'
         })
     }, {scope: sat});
+
+    useGSAP(() => {
+        gsap.to(
+            '.hero-image', {
+                rotate: 360,
+                ease: 'linear',
+                duration: 30,
+                repeat: -1
+            }
+        )
+    })
 
     useLayoutEffect(() => {
         const contexts = [];
@@ -51,6 +64,51 @@ export default function HeroSection({stars}){
             }
     });
 
+    useGSAP(() => {
+        const textTop = SplitType.create('.text-top', {types: 'chars'});
+        const textTopChars = textTop.chars;
+
+        gsap.fromTo(
+            textTopChars,
+            {
+                z: -100,
+                opacity: 0
+            },
+            {
+                z: 0,
+                rotate: 0,
+                opacity: 1,
+                duration: .8,
+                stagger: .09,
+                ease: 'power1'
+            }
+        )
+    })
+
+    useGSAP(() => {
+        const myText = SplitType.create('.text-bottom', {types: 'words,chars'});
+        const chars = myText.chars;
+
+        gsap.fromTo(
+            chars,
+            { 
+              y: 100,
+              x: -100,
+              opacity: 0,
+              rotate: 360
+            },
+            {
+              y: 0,
+              x: 0, 
+              rotate: 0,
+              opacity: 1,
+              stagger: .05,
+              duration: .1,
+              ease: 'power4.out',
+            }
+        )
+    })
+
 
     return(
         <div ref={sat} id="hero-section">
@@ -59,15 +117,15 @@ export default function HeroSection({stars}){
                     Hi 👋, I'm <span>Vignesh</span>
                 </div>
                 <div className="text-bottom">
-                I like making fun,interactive things with code.
+                    I like making fun, interactive things with code.
                 </div>
             </div>
 
             <div className="hero-image-container">
-                <img  src={SoCalledEarth} alt="Earth illustration" className="hero-image" />
+                <img src={SoCalledEarth} alt="Earth illustration" className="hero-image" />
             </div>
             <img  src={Satellite} alt="Satellite Illustration" className="satelite-image" />
-                {stars}
+            {stars}
         </div>
     )
 }

@@ -27,6 +27,7 @@
     color: var(--color-text-transparent);
     text-align: center;
     animation: fadeIn .8s ease 0s 1;
+    scale: 1 !important;
 }
 
 .text-top span {
@@ -39,7 +40,7 @@
     font-weight: 600;
     color: var(--color-text-normal);
     line-height: 1.9;
-    animation: fadeIn .2s ease .2s 1;
+    position: relative;
 }
 
 /* Hero Image */
@@ -57,7 +58,6 @@
     margin-right: auto;
     z-index: 1;
     bottom: -245px;
-    animation: rotatePlanet 30s linear 0s infinite, fadeIn .8s ease 0s 1;
 }
 
 
