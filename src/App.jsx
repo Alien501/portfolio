@@ -18,7 +18,7 @@ gsap.registerPlugin(useGSAP,ScrollTrigger,ScrollToPlugin,TextPlugin);
 
 function App() {
   const [stars, setStars] = useState([]);
-  const [isLoading, setIsloading] = useState(false);
+  const [isLoading, setIsloading] = useState(true);
   
   function addStars() {
     const newStars = [];
@@ -73,7 +73,7 @@ function App() {
         <Header />
         <MainPage stars={stars.slice(0, 15)}/>
       </div >}
-      {/* <Analytics /> */}
+      <Analytics />
     </>
   )
 }
