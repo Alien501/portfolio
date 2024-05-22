@@ -48,22 +48,16 @@
 /* Bg pattern */
 
 .background-pattern {
-    /* --x: 0%;
-    --y: 0%; */
     background-image: radial-gradient(#7d74ff3f 12%, transparent 5%);
-    /* background-position: var(--x) var(--y); */
-    background-size: 5vmin 5vmin;
+    background-size: 3vmin 3vmin;
     height: 100vh;
     left: 0;
     top: 0;
     position: absolute;
-    transition: opacity 800ms ease, 
-    background-size 800ms ease,
-    background-position 800ms ease;
     width: 100vw;
     z-index: 5;
-    opacity: .7;
-    animation: blink .8s linear 0s infinite, moveUp 60s linear 0s infinite forwards;
+    opacity: 1;
+    animation: moveUp 60s linear 0s infinite forwards;
 }
 
 @keyframes moveUp {
@@ -72,15 +66,4 @@
     } 100% {
         background-position: 100% 0%;
     }
-}
-
-@keyframes blink {
-    to {
-    background-image: radial-gradient(#6156ff3f 12%, transparent 5%);
-    }
-}
-
-.education-detail-container:hover + .background-pattern {
-    opacity: 0.2;
-    background-size: 11vmin 11vmin;
 }

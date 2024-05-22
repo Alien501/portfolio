@@ -1,18 +1,23 @@
+@font-face {
+    font-family: 'Notosans';
+    src: url(./assets/fonts/NotoSans.ttf);
+}
+
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-family: 'Jost', sans-serif;
     scroll-behavior: smooth;
-    /* overflow: hidden; */
+    font-family: Notosans, sans-serif;
 }
+
 
 :root {
     --color-bg: #02001C;
     --color-bg-transparent: hsla(244, 100%, 5%, 0.9);
     --color-text-transparent: hsla(244, 100%, 85%, 0.48);
-    --color-text-bright: #b8b3ff;
-    --color-text-normal: hsla(244, 42%, 68%, 1);
+    --color-text-bright: #EFEDFF;
+    --color-text-normal: #7970FF;
     --color-bg-dark: hsla(240, 95%, 8%, 1);
     --color-bg-dark-transparent: hsla(240, 95%, 8%, 0.9);
 }

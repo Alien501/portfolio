@@ -1,7 +1,7 @@
 import React from "react";
 
 import './ProjectSection.css'
-import ProjectCard from "../../elements/ProjectCard/ProjectCard";
+import ProjectCard from "../../Components/ProjectCard/ProjectCard";
 
 import lrcImage2 from '../../assets/lrc_get_portrait.png'
 import port2 from '../../assets/this_portrait.png'

@@ -39,7 +39,6 @@
     top: -45px;
     left: 15px;
     font-size: 1.4rem;
-    letter-spacing: .1rem;
     font-weight: 500;
     color: var(--color-text-bright);
     z-index: 70;
@@ -79,7 +78,6 @@
 .project-description {
     font-size: 1.2rem;
     line-height: 1.6rem;
-    letter-spacing: .1rem;
     user-select: none;
 }
 .project-btn {

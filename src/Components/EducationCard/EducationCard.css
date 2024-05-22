@@ -4,12 +4,11 @@
     margin: 5px auto;
     color: var(--color-text-normal);
     border-radius: 10px;
-    border: 2px solid var(--color-text-bright);
+    border: 2px solid var(--color-text-normal);
     background-color: var(--color-bg-dark);
     box-shadow: 0px 0px 10px var(--color-bg);
     font-size: 1rem;
     line-height: 1.6rem;
-    letter-spacing: .1rem;
     user-select: none;
     transition: .3s ease;
     scale: 0.9;
@@ -62,6 +61,5 @@
 
 .education-card span {
     z-index: 10;
-
     color: var(--color-text-transparent);
 }

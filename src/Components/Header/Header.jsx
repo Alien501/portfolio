@@ -15,10 +15,6 @@ export default function Header() {
         <nav className="header-container" style={{
             backgroundColor: isClicked? 'var(--color-bg-dark, #010128)': 'var(--color-bg-dark-transparent)'
         }}>
-            <div className="filter-layer">
-
-            </div>
-
             <div className="content-layer">
                 <a href="#hero-section" className="header-name">
                     Alien501

@@ -34,7 +34,7 @@ form {
     align-items: center;
     flex-direction: column;
     padding: 5px;
-    border: 2px solid var(--color-text-bright);
+    border: 2px solid var(--color-text-normal);
     background-color: var(--color-bg-dark);
     box-shadow: 0px 0px 10px var(--color-bg);
     border-radius: 10px;
@@ -53,7 +53,6 @@ form {
     font-weight: 300;
     line-height: 1.6rem;
     outline: 2px solid transparent;
-    letter-spacing: .1rem;
     background-color: var(--color-bg-transparent);
     outline: 2px solid transparent;
 
@@ -74,7 +73,6 @@ form {
     font-weight: 300;
     line-height: 1.6rem;
     outline: 2px solid transparent;
-    letter-spacing: .1rem;
     background-color: var(--color-bg-transparent);
     resize: none;
     display: block;
@@ -103,7 +101,6 @@ form {
     font-size: 1.4rem;
     font-size: 400;
     line-height: 1.6rem;
-    letter-spacing: .1rem;
     margin: 15px auto;
     transition: .3s ease;
 }
