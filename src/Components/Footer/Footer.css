@@ -22,9 +22,9 @@
     user-select: none;
 }
 
-#footer-container p:hover {
+/* #footer-container p:hover {
     cursor: pointer;
-}
+} */
 
 .footer-menu {
     display: flex;
@@ -63,7 +63,7 @@
     transform: rotate(360deg);
 }
 
-#footer-container p::after {
+/* #footer-container p::after {
     display: block;
     position: relative;
     left: 0;
@@ -74,10 +74,9 @@
     scale: 0;
     transition: .4s ease;
     border-radius: 4px;
-}
+} */
 
-#footer-container p:hover::after {
+/* #footer-container p:hover::after {
     scale: 1;
-    /* width: 100%; */
     cursor: pointer;
-}
+} */

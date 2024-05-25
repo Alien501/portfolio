@@ -1,0 +1,74 @@
+.tech-stack-card-container {
+    width: 100%;
+    height: max-content;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid var(--color-text-normal);
+    color: #fff;
+    background-color: hsla(244, 100%, 85%, 0.264);
+    padding: 10px;
+    border-radius: 5px;
+    margin: 10px auto;
+    transition: .3s ease;
+    position: relative;
+    z-index: 10;
+    overflow: hidden;
+}
+
+.tech-stack-card-container::after, .tech-stack-card-container::before {
+    content: '';
+    width: 100%;
+    height: 100%;
+    background-color: var(--color-text-normal);
+    position: absolute;
+    z-index: 5;
+    transition: .5s ease;
+}
+
+.tech-stack-card-container::after {
+    transform: translate3d(0, -100%, 0);
+}
+
+.tech-stack-card-container::before {
+    transform: translate3d(0, 100%, 0);
+}
+
+.tech-stack-card-container:hover {
+    color: var(--color-bg);
+    cursor: pointer;
+    box-shadow: 0px 0px 10px #c847ff38,
+    0px 0px 10px #c847ff38,
+    0px 0px 10px #c847ff38,
+    0px 0px 10px #c847ff38;
+}
+
+.tech-stack-card-container:hover.tech-stack-card-container::after, .tech-stack-card-container:hover.tech-stack-card-container::before {
+    transform: translate3d(0, 0, 0);
+    transition: .9s ease;
+}
+
+.tech-image-container svg {
+    display: block;
+    color: red !important;
+    filter: grayscale(100%) sepia(100%);
+    transition: .4s ease;
+}
+
+.tech-stack-card-container:hover .tech-image-container svg {
+    filter: drop-shadow(0px 0px 5px rgba(0, 0, 0, .4));
+    transform: rotate3d(1, 0, 0, 360deg);
+}
+
+.tech-image-container {
+    z-index: 10;
+    min-width: 100%;
+}
+
+.tech-name-container {
+    font-size: 1rem;
+    font-weight: 500;
+    z-index: 10;
+}

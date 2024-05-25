@@ -1,0 +1,29 @@
+#techstack-section {
+    min-height: 100vh;
+    max-height: max-content;
+}
+
+#techstack-section h1 {
+    color: var(--color-text-normal);
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+    margin: 10px auto;
+    display: block;
+    margin-bottom: 40px;
+}
+
+.techstack-cards-container {
+    margin-top: 100px;
+    width: 90%;
+    margin: 10px auto;
+    display: grid;
+    grid-template-columns: repeat(3, 80px);
+    grid-template-rows: repeat(4, 80px);
+    grid-gap: 20px;
+    grid-row-gap: 50px;
+    place-content: center;
+    place-items: center;
+    justify-content: space-evenly;
+    align-content: space-between;
+}

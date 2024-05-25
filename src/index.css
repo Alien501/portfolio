@@ -9,6 +9,7 @@
     padding: 0;
     scroll-behavior: smooth;
     font-family: Notosans, sans-serif;
+    user-select: none;
 }
 
 

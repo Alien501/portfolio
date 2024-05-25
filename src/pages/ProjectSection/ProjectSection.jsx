@@ -6,7 +6,8 @@ import ProjectCard from "../../Components/ProjectCard/ProjectCard";
 import lrcImage2 from '../../assets/lrc_get_portrait.png'
 import port2 from '../../assets/this_portrait.png'
 import syncPlay from '../../assets/sync-play.png'
-import i5 from '../../assets/i5.avif'
+import devsWeb from '../../assets/devs_web.webp'
+import devsComp from '../../assets/devs_comp.webp'
 
 export default function ProjectSection() {
     return(
@@ -37,13 +38,20 @@ export default function ProjectSection() {
                     project_image={[syncPlay]}
                 />
 
-                {/* <ProjectCard
-                    project_title={'I5 Academy'}
-                    project_link={'https://i5-academy.vercel.app/'}
+                <ProjectCard
+                    project_title={'DEVS REC Website'}
+                    project_link={'https://devsrec.club/'}
                     git_link={''}
-                    project_desc={'A simple and minimalistic blog site made for a client.'}
-                    project_image={[i5]}
-                /> */}
+                    project_desc={'A website I made for my college\'s techincal club, DEVS. This is currently serving as their current website.'}
+                    project_image={[devsWeb]}
+                />
+                <ProjectCard
+                    project_title={'REC Companion'}
+                    project_link={'https://comp.devsrec.club/'}
+                    git_link={'https://github.com/DevsREC/rec_comapnion'}
+                    project_desc={'A PWA collabratively made under DEVS for ease access of various functionalities present and offered my college.'}
+                    project_image={[devsComp]}
+                />
             </div>
         </div>
     )

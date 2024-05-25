@@ -9,7 +9,7 @@
     padding: 10px;
     border-radius: 50%;
     background-color: var(--color-bg-dark-transparent);
-    border: 2px solid var(--color-text-bright);
+    border: 2px solid var(--color-text-normal);
     box-shadow: 0px 0px 5px var(--color-bg-dark);
     transition: .3s ease;
     overflow: hidden;
