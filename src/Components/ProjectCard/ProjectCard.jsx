@@ -15,7 +15,7 @@ export default function ProjectCard({project_title, project_link, git_link, proj
 
     
     function onCardClick() {
-        const audioElement = document.querySelector('audio');
+        const audioElement = document.querySelector('.project-audio');
         setIsCardClicked(prev => !prev);
         if(!isCardClicked){
             audioElement.play();
@@ -73,7 +73,7 @@ export default function ProjectCard({project_title, project_link, git_link, proj
                     {(project_link == '')?  <button href='#' className="project-btn site-btn" target="_new" disabled>Live Site</button>:  <a href={project_link} className="project-btn site-btn" target="_new">Live Site</a>}
                 </div>
             </div>
-            <audio preload="true" src={confettiSound}></audio>
+            <audio preload="true" className="project-audio" src={confettiSound}></audio>
             {/* <canvas className="confetti" id={`my-canvas-${project_title}`}></canvas> */}
         </div>
     )

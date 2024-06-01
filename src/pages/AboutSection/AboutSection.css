@@ -154,3 +154,64 @@
     transform: translate(-50%, 100%);
     z-index: 5;
 }
+
+/* Alien */
+
+.about-alien-container {
+    width: 100px;
+    height: 100px;
+    overflow: hidden;
+    position: absolute;
+    top: -45px;
+    transition: .3s ease;
+}
+
+.alien-container {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transition: .8s ease;
+}
+
+.about-alien-container:hover .alien-container{
+    transform: translate3d(0, 100px, 0);
+    transition: .8s ease;
+    cursor: grab;
+}
+
+
+.about-alien-container img {
+    display: block;
+}
+
+.alien-face {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transition: .4s ease;
+}
+
+.about-alien-eye-container-left,
+.about-alien-eye-container-right {
+    position: absolute;
+    width: 20px;
+    height: 30px;
+    top: 30px;
+    overflow: hidden;
+    border-radius: 30px;
+}
+
+.alien-eye-1, .alien-eye-2 {
+    display: block;
+    width: 80%;
+    height: 80%;
+    transition: .3s ease;
+}
+
+.about-alien-eye-container-left {
+    left: 20px;
+}
+
+.about-alien-eye-container-right {
+    right: 18px;
+}

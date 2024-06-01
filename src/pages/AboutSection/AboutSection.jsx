@@ -1,11 +1,14 @@
-import React, { useEffect, useLayoutEffect, useRef } from "react";
+import React, { useEffect, useLayoutEffect, useRef, useState } from "react";
 
 import './AboutSection.css'
-import Rover from '../../assets/rover.svg';
+
 import Resume from '../../assets/Resume (1).pdf'
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import SplitType from "split-type";
+
+import alienFace from '../../assets/alienFace.svg'
+import alienEye from '../../assets/alienEye.svg'
 
 export default function AboutSection() {
     const hero = useRef(null);
@@ -108,12 +111,49 @@ export default function AboutSection() {
             }
         )
     })
+    // Eyes animation
+    useEffect(() => {
+        const aboutSection = document.querySelector('.about-container');
+        const eyeBallLeft = document.querySelector('.alien-eye-1');
+        const eyeBallRight = document.querySelector('.alien-eye-2');
+
+        aboutSection.addEventListener('mousemove', (e) => {
+            let rect1 = eyeBallLeft.getBoundingClientRect();
+            let x1 = (e.pageX - rect1.left)/70;
+            let y1 = (e.pageY - rect1.top)/70;
+
+            let rect2 = eyeBallRight.getBoundingClientRect();
+            let x2 = (e.pageX - rect1.left)/70;
+            let y2 = (e.pageY - rect1.top)/70;
+
+            eyeBallLeft.style.transform = `translate3d(${x1}px, ${y1}px, 0px)`
+            eyeBallRight.style.transform = `translate3d(${x2}px, ${y2}px, 0px)`
+        });
+
+        return () => {
+            aboutSection.removeEventListener('mousemove', () => {
+                console.log(e.pageX);
+                console.log(e.pageY);
+            });
+        }
+    }, [])
 
     return(
         <div ref={hero} className="about-container" id="about-section">
                 <h2>About Me</h2>
                 <canvas className="about-canvas"></canvas>
                 <div className="about-me-outer-container">
+                    <div className="about-alien-container">
+                        <div className="alien-container">
+                            <img src={alienFace} alt="Alien Face" className="alien-face" />
+                            <div className="about-alien-eye-container-left">
+                                <img src={alienEye} alt="Alien Face" className="eye-ball alien-eye-1" />
+                            </div>
+                            <div className="about-alien-eye-container-right">
+                                <img src={alienEye} alt="Alien Face" className="eye-ball alien-eye-2" />
+                            </div>
+                        </div>
+                    </div>
                     <div className="about-me-content-container">
                         <div className="about-me-text-container"> 
                             <p>

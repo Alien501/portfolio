@@ -1,5 +1,5 @@
 #education-section {
-    height: 100vh;
+    max-height: max-content;
     width: 100%;
     background-color: var(--color-bg);
     position: relative;
@@ -12,20 +12,13 @@
     right: 0;
     top: 0px;
     bottom: 0;
-    --x1: 50%;
-    --y1: 50%;
-    background-image: radial-gradient(
-        circle farthest-side at var(--x1) var(--y1),
-        #6156ff3f 0%,
-        transparent 100% 
-    );
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     overflow: hidden;
 }
-
+/* 
 
 .education-detail-container {
     z-index: 10;
@@ -45,7 +38,7 @@
     2px 2px 1px var(--color-bg-dark);
 }
 
-/* Bg pattern */
+Bg pattern
 
 .background-pattern {
     background-image: radial-gradient(#7d74ff3f 12%, transparent 5%);
@@ -66,4 +59,37 @@
     } 100% {
         background-position: 100% 0%;
     }
+} */
+
+
+#education-section h1 {
+    color: var(--color-text-normal);
+    font-size: 2rem;
+    top: 0;
+    position: absolute;
+}
+
+.aus-edu {
+    display: block;
+    width: 70px;
+}
+
+.computer-screen-container {
+    min-height: 100vh;
+    max-height: max-content;
+    /* border: 1px solid #fff; */
+    width: 90%;
+    margin-top: 50px;
+}
+
+.computer-screen {
+    width: 98%;
+    min-height: 90vh;
+    border: 5px solid rgb(26, 26, 29);
+    margin: 10px auto;
+    border-radius: 10px;
+    background-color: rgba(124, 119, 146, 0.129);
+    padding: 10px;
+    position: relative;
+    overflow: hidden;
 }

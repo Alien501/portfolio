@@ -1,18 +1,24 @@
-import React, { useEffect, useLayoutEffect, useRef} from "react";
+import React, { useEffect, useState, useLayoutEffect, useRef} from "react";
 
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap/gsap-core";
 
 import SplitType from "split-type";
 
+
+import song1 from '../../assets/song1.mp3'
+import song2 from '../../assets/song2.mp3'
+import song3 from '../../assets/song3.mp3'
+
 import './HeroSection.css'
-import SoCalledEarth from '../../assets/planet earth.svg'
-import Satellite from '../../assets/sat 2.svg'
 
 import myboy from '../../assets/austronaut.webp'
 import earth from '../../assets/earth.svg';
 
 export default function HeroSection({stars}){
+    const songList = [song1, song2, song3];
+    const [currentSong, setCurrentSong] = useState(0);
+    
     const hero = useRef();
     // Todo
     // useLayoutEffect(() => {
@@ -64,9 +70,12 @@ export default function HeroSection({stars}){
             }
         )
     }
-
-    function roateAustronaut() {
+    
+    async function roateAustronaut() {
         const aus = document.querySelector('.hero-aus');
+        const audioElementHero = document.querySelector('.hero-audio');
+
+        audioElementHero.play()
         const context = gsap.context(() => {
             gsap.to(
                 aus,
@@ -80,7 +89,6 @@ export default function HeroSection({stars}){
                 }
             )
         })
-
         // return () => {
         //     context.revert();
         // }
@@ -205,11 +213,12 @@ export default function HeroSection({stars}){
             </div>
             <div className="hero-section-right-container">
                 <div className="hero-aus-image-container">
-                    <img onClick={roateAustronaut} src={myboy} alt="Austronaut illustration" className="hero-aus" />
+                    <img onClick={async () => {await roateAustronaut().finally(() =>{setCurrentSong(prev => (prev+1)%3)})}} src={myboy} alt="Austronaut illustration" className="hero-aus" />
                 </div>
             </div>
             <img src={earth} alt="Earth" className="earth" />
             {stars}
+            <audio src={songList[currentSong]} className="hero-audio"></audio>
         </div>
     )
 }
