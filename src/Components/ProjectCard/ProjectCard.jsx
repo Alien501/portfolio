@@ -74,7 +74,6 @@ export default function ProjectCard({project_title, project_link, git_link, proj
                 </div>
             </div>
             <audio preload="true" className="project-audio" src={confettiSound}></audio>
-            {/* <canvas className="confetti" id={`my-canvas-${project_title}`}></canvas> */}
         </div>
     )
 }

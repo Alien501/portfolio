@@ -96,6 +96,9 @@
     height: max-content;
     width: max-content;
     padding: 20px;
+    position: relative;
+    z-index: 20;
+    /* backdrop-filter: blur(5px); */
 }
 
 .menu-item {
@@ -124,4 +127,26 @@
     border-radius: 5px;
     background-position: 0 100%;
     color: var(--color-bg-dark);
+}
+
+.menu-hovered-content-container {
+    position: absolute;
+    font-size: 10em;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    color: var(--color-text-transparent);
+    font-weight: bolder;
+    text-wrap: nowrap;
+    width: 100%;
+    text-align: center;
+    animation: moveSomewhere .4s ease 0s 1;
+}
+
+@keyframes moveSomewhere {
+    0% {
+        transform: translate3d(-100vw, -50%, 0);
+    } 100% {
+        transform: translate(0, -50%, 0);
+    }
 }

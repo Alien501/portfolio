@@ -18,6 +18,7 @@ import earth from '../../assets/earth.svg';
 export default function HeroSection({stars}){
     const songList = [song1, song2, song3];
     const [currentSong, setCurrentSong] = useState(0);
+    const heroAudioElement = useRef(null);
     
     const hero = useRef();
     // Todo
@@ -75,7 +76,16 @@ export default function HeroSection({stars}){
         const aus = document.querySelector('.hero-aus');
         const audioElementHero = document.querySelector('.hero-audio');
 
-        audioElementHero.play()
+        const audioPromise = audioElementHero.play();
+
+        if(audioPromise !== undefined) {
+            audioPromise.then(() => {
+                console.log('Do you hear anything');
+            }).catch((error) => {
+                console.log(`Hello, I'm the error ${error}`);
+            })
+        }
+
         const context = gsap.context(() => {
             gsap.to(
                 aus,
@@ -93,6 +103,24 @@ export default function HeroSection({stars}){
         //     context.revert();
         // }
     }
+
+    useEffect(() => {
+        const heroAudio = heroAudioElement.current;
+
+        const onHeroEnd = () => {
+            setCurrentSong(prev => (prev + 1) % 3);
+            console.log('Updated song!');
+        }
+
+        if(heroAudio) {
+            heroAudio.addEventListener('ended', onHeroEnd);
+        }
+
+        return () => {
+            if(heroAudio) 
+                heroAudio.removeEventListener('ended', onHeroEnd);
+        }
+    })
 
     // Erth animaton on scroll
     useGSAP(() => {
@@ -213,12 +241,12 @@ export default function HeroSection({stars}){
             </div>
             <div className="hero-section-right-container">
                 <div className="hero-aus-image-container">
-                    <img onClick={async () => {await roateAustronaut().finally(() =>{setCurrentSong(prev => (prev+1)%3)})}} src={myboy} alt="Austronaut illustration" className="hero-aus" />
+                    <img src={myboy} onClick={roateAustronaut} alt="Austronaut illustration" className="hero-aus" />
                 </div>
             </div>
             <img src={earth} alt="Earth" className="earth" />
             {stars}
-            <audio src={songList[currentSong]} className="hero-audio"></audio>
+            <audio ref={heroAudioElement} src={songList[currentSong]} className="hero-audio"></audio>
         </div>
     )
 }

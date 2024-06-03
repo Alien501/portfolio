@@ -35,10 +35,12 @@
 }
 
 .project-title {
-    position: relative;
-    top: -45px;
-    left: 15px;
-    font-size: 1.4rem;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, 180px);
+    font-size: 1.3rem;
+    text-wrap: nowrap;
     font-weight: 500;
     color: var(--color-text-bright);
     z-index: 70;
@@ -73,10 +75,12 @@
     z-index: 80;
     transition: .3s ease;
     box-shadow: 0px 0px 10px #130d5fc2;
+    backdrop-filter: blur(5px);
 }
 
 .project-description {
     font-size: 1.2rem;
+    font-weight: 400;
     line-height: 1.6rem;
     user-select: none;
 }
