@@ -19,42 +19,7 @@ export default function HeroSection({stars}){
     const songList = [song1, song2, song3];
     const [currentSong, setCurrentSong] = useState(0);
     const heroAudioElement = useRef(null);
-    
     const hero = useRef();
-    // Todo
-    // useLayoutEffect(() => {
-    //     const contexts = [];
-    //     setTimeout(
-    //         () => {
-    //             for (let i = 0; i < stars.length; i++) {
-    //                 const x = Math.random() * (window.innerWidth - 10);
-    //                 const y = Math.random() * (window.innerHeight - 10);
-    //                 let ctx = gsap.context(
-    //                     () => {
-    //                         gsap.fromTo(`.star${i}`,
-    //                         {
-    //                             opacity: 0.3,
-    //                             x: x,
-    //                             y: y-600
-    //                         }
-    //                         ,{
-    //                             opacity: 0.9,
-    //                             duration: 0.8,
-    //                             delay: Math.random()*2,
-    //                             yoyo: true,
-    //                             repeat: -1
-    //                         });
-    //                     });
-    //                 contexts.push(ctx)
-    //             };
-    //         }, 1000);
-    //         console.log('Running');
-    //         return () => {
-    //             contexts.forEach((ctx) => ctx.revert());
-    //         }
-    // });
-
-    // Austronaut Animation
 
     function austronautFloat(aus) {
         gsap.fromTo(
@@ -99,9 +64,6 @@ export default function HeroSection({stars}){
                 }
             )
         })
-        // return () => {
-        //     context.revert();
-        // }
     }
 
     useEffect(() => {
@@ -137,6 +99,7 @@ export default function HeroSection({stars}){
 
         window.addEventListener('scroll', something)
     })
+
 
     useGSAP(() => {
         const aus = document.querySelector('.hero-aus');

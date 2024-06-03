@@ -10,7 +10,6 @@
     align-items: center;
     border-radius: 10px;
     transition: .3s ease;
-    /* position: relative; */
 }
 
 .edu-ex-card-container:hover {

@@ -22,9 +22,6 @@
     user-select: none;
 }
 
-/* #footer-container p:hover {
-    cursor: pointer;
-} */
 
 .footer-menu {
     display: flex;
@@ -35,7 +32,6 @@
     text-decoration: none;
     color: var(--color-text-normal);
     border: 2px solid transparent;
-    /* transition: .3s ease; */
 }
 
 .footer-menu span {
@@ -62,21 +58,3 @@
     cursor: pointer;
     transform: rotate(360deg);
 }
-
-/* #footer-container p::after {
-    display: block;
-    position: relative;
-    left: 0;
-    content: '';
-    height: 2px;
-    width: 100%;
-    background-color: var(--color-text-bright);
-    scale: 0;
-    transition: .4s ease;
-    border-radius: 4px;
-} */
-
-/* #footer-container p:hover::after {
-    scale: 1;
-    cursor: pointer;
-} */

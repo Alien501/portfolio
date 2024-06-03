@@ -9,8 +9,7 @@ import confetti from "canvas-confetti";
 export default function ProjectCard({project_title, project_link, git_link, project_desc, project_image}) {
     const [isCardClicked, setIsCardClicked] = useState(false);
     var end = 10;
-
-// go Buckeyes!
+    
     var colors = ['#0091ff', '#fffff', '#01013c', '#130d5fc2'];
 
     
