@@ -9,7 +9,6 @@ import ProjectSection from "../ProjectSection/ProjectSection";
 import ContactSection from "../ContactSection/ContactSection";
 import Footer from "../../Components/Footer/Footer";
 import FAB from "../../Components/FAB/FAB";
-import TechStackSection from "../TechStackSection/TechStackSection";
 
 export default function MainPage({stars}) {
     const [isScrolled, setIsScrolled] = useState(false);
@@ -34,7 +33,6 @@ export default function MainPage({stars}) {
         <div className="content-container">
             <HeroSection stars={stars}/>
             <AboutSection />
-            <TechStackSection />
             <EducationSection />
             <ProjectSection />
             <ContactSection />

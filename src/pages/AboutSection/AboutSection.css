@@ -215,3 +215,38 @@
 .about-alien-eye-container-right {
     right: 18px;
 }
+
+.tech-stack-container {
+    width: 90%;
+    height: 80px;
+    margin: 20px auto 10px;
+    border-radius: 25px;
+    border: 1px solid #c847ff38;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+    white-space: nowrap;
+}
+
+.tech-stack-container svg {
+    display: block;
+    height: 50px;
+    min-width: 50px;
+    background-color: #ffffff16;
+    margin: 15px;
+    border-radius: 5px;
+    backdrop-filter: blur(5px);
+    position: relative;
+    white-space: nowrap;
+}
+
+
+@keyframes scroll-hor {
+    0% {
+        left: 100%;
+    } 100% {
+        left: -100%;
+    }
+}
