@@ -1,5 +1,8 @@
 import React from "react";
 
+import gsap from "gsap";
+import { useGSAP } from "@gsap/react";
+
 import './ProjectSection.css'
 import ProjectCard from "../../Components/ProjectCard/ProjectCard";
 
@@ -10,6 +13,25 @@ import devsWeb from '../../assets/devs_web.webp'
 import devsComp from '../../assets/devs_comp.webp'
 
 export default function ProjectSection() {
+
+    useGSAP(() => {
+        const projectCards = document.querySelectorAll('.project-card-container');
+
+        gsap.fromTo(
+            projectCards,
+            {
+                bottom: '-100px',
+            },
+            {
+                bottom: '0',
+                duration: .8,
+                stagger: .5,
+                scrollTrigger: '#project-section',
+                ease: 'none'
+            }
+        )
+    })
+
     return(
         <div id="project-section">
             <div id="project-head">Projects</div>
