@@ -8,10 +8,16 @@
     justify-content: space-between;
     padding: 8px;
     align-items: center;
+    transform: translate3d(0, -100%, 0);
     z-index: 95;
     background-color: var(--color-bg-dark-transparent);
-    animation: fadeDown 1s ease 0s 1  ;
+    animation: fadeDown 1s ease 0s 1;
     backdrop-filter: blur(10px);
+    transition: .3s ease;
+}
+
+.header-container.active {
+    transform: translate3d(0, 0, 0);
 }
 
 .content-layer {
@@ -49,10 +55,6 @@
 
 .header-icon-container:hover {
     cursor: pointer;
-}
-
-.header-icon-container:hover .icon-head {
-    transform: rotate(175deg);
 }
 
 .header-icon-container:active .icon-head {

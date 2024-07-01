@@ -187,19 +187,17 @@ export default function AboutSection() {
             let rect1 = eyeBallLeft.getBoundingClientRect();
             let x1 = (e.pageX - rect1.left)/70;
             let y1 = (e.pageY - rect1.top)/70;
-
-            let rect2 = eyeBallRight.getBoundingClientRect();
             let x2 = (e.pageX - rect1.left)/70;
             let y2 = (e.pageY - rect1.top)/70;
 
+            if(x1 > 2.6727177211216517 && y1 > 19.13495581490653 || x2 > 2.6727177211216517 && y2 > 19.13495581490653)
+                return
             eyeBallLeft.style.transform = `translate3d(${x1}px, ${y1}px, 0px)`
             eyeBallRight.style.transform = `translate3d(${x2}px, ${y2}px, 0px)`
         });
 
         return () => {
             aboutSection.removeEventListener('mousemove', () => {
-                console.log(e.pageX);
-                console.log(e.pageY);
             });
         }
     }, [])

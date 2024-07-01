@@ -42,11 +42,8 @@ export default function ContactSection() {
                     body: f
                 }
             )
-
-            console.log(res);
             if(res.ok){
                 const data = await res.json();
-                console.log(data);
                 setFormData(prev => {
                     return {
                         name: '',

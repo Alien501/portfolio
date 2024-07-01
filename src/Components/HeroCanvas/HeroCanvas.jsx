@@ -4,7 +4,6 @@ import './HeroCanvas.css';
 
 const HeroCanvas = () => {
     useEffect(() => {
-        console.log('Hello');
         const heroCanvas = document.querySelector('.hero-canvas');
         const heroContext = heroCanvas.getContext('2d');
         heroCanvas.width = heroCanvas.offsetWidth;
@@ -18,7 +17,7 @@ const HeroCanvas = () => {
             const radius = Math.floor(Math.random() * 1.5) + 0.5;
             const speed = Math.random() * 1.5 + .5;
             const posX = Math.floor(Math.random() * heroCanvas.width);
-            const posY = heroCanvas.height + Math.floor(Math.random() * heroCanvas.height);
+            const posY = Math.floor(Math.random() * heroCanvas.height);
             const color = Math.floor(Math.random() * 3);
     
             particles.push({
@@ -45,18 +44,17 @@ const HeroCanvas = () => {
             heroContext.clearRect(0, 0, heroCanvas.width, heroCanvas.height);
             particles.forEach(particle => {
                 particle.angle += 0.02;
-                particle.x += Math.cos(particle.angle) * 0.5;
-                particle.y -= particle.speed;
-
+                particle.x += Math.cos(particle.angle) * 0.2;
+    
                 if(deltaX !== 0) particle.velocityX = deltaX * .01;
-
+    
                 particle.x += particle.velocityX;
-
                 particle.velocityX *= .95;
-
-                if (particle.y < -particle.radius) {
-                    particle.y = heroCanvas.height + particle.radius;
-                    particle.x = Math.floor(Math.random() * heroCanvas.width);
+    
+                if (particle.x > heroCanvas.width + particle.radius) {
+                    particle.x = -particle.radius;
+                } else if (particle.x < -particle.radius) {
+                    particle.x = heroCanvas.width + particle.radius;
                 }
     
                 heroContext.beginPath();
@@ -68,19 +66,22 @@ const HeroCanvas = () => {
     
         animateParticles();
         drawParticles();
-
-        const changeParticleX = () => {
+    
+        const changeParticleX = (event) => {
             const x = event.pageX;
-            deltaX = x - prevX;
+            if (prevX !== null) {
+                deltaX = x - prevX;
+            }
             prevX = x;
         }
-
+    
         heroCanvas.addEventListener('mousemove', changeParticleX);
-
+    
         return () => {
             heroCanvas.removeEventListener('mousemove', changeParticleX);
         }
     }, []);
+    
 
     return <canvas className="hero-canvas"></canvas>
 }

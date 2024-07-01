@@ -46,7 +46,6 @@ export default function HeroSection(){
 
         if(audioPromise !== undefined) {
             audioPromise.then(() => {
-                console.log('Do you hear anything');
             }).catch((error) => {
                 console.log(`Hello, I'm the error ${error}`);
             })
@@ -72,7 +71,6 @@ export default function HeroSection(){
 
         const onHeroEnd = () => {
             setCurrentSong(prev => (prev + 1) % 3);
-            console.log('Updated song!');
         }
 
         if(heroAudio) {

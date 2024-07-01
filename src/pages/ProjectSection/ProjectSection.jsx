@@ -6,11 +6,12 @@ import { useGSAP } from "@gsap/react";
 import './ProjectSection.css'
 import ProjectCard from "../../Components/ProjectCard/ProjectCard";
 
-import lrcImage2 from '../../assets/lrc_get_portrait.png'
+import lrcImage2 from '../../assets/lrc_get_portrait.webp'
 import port2 from '../../assets/this_portrait.png'
 import syncPlay from '../../assets/sync-play.png'
 import devsWeb from '../../assets/devs_web.webp'
 import devsComp from '../../assets/devs_comp.webp'
+import thirukural from '../../assets/thirukural.webp'
 
 export default function ProjectSection() {
 
@@ -38,8 +39,8 @@ export default function ProjectSection() {
             <div className="project-container">
                 <ProjectCard
                     project_title={'LRC Get'}
-                    project_link={'https://lrc-get.vercel.app/'}
-                    git_link={'https://github.com/Alien501/lrc-get-public'}
+                    project_link={'https://lrc-get-new.vercel.app/'}
+                    git_link={'https://github.com/Alien501/LRC-Get'}
                     project_desc={'This website provides a convenient platform to retrieve both synchronized and non-synchronized lyrics for songs from diverse sources.'}
                     project_image={[lrcImage2]}
                 />
@@ -73,6 +74,13 @@ export default function ProjectSection() {
                     git_link={'https://github.com/DevsREC/rec_comapnion'}
                     project_desc={'A PWA collabratively made under DEVS for ease access of various functionalities present and offered my college.'}
                     project_image={[devsComp]}
+                />
+                <ProjectCard
+                    project_title={'Thirrukural'}
+                    project_link={'https://thirukural-uetr.vercel.app/'}
+                    git_link={'https://github.com/Alien501/thirukural'}
+                    project_desc={'The Thirukural API & Frontend project is a web application designed to make the Thirukural accessible to all. Using Node.js, Express.js, React, NextUI, and Tailwind CSS, it provides a comprehensive API and a user-friendly interface to explore this ancient Tamil literary work.'}
+                    project_image={[thirukural]}
                 />
             </div>
         </div>
