@@ -43,6 +43,7 @@ export default function ProjectSection() {
                     git_link={'https://github.com/Alien501/LRC-Get'}
                     project_desc={'This website provides a convenient platform to retrieve both synchronized and non-synchronized lyrics for songs from diverse sources.'}
                     project_image={[lrcImage2]}
+                    project_id={'p-1'}
                 />
 
                 <ProjectCard
@@ -51,6 +52,7 @@ export default function ProjectSection() {
                     git_link={'https://github.com/Alien501/portfolio'}
                     project_desc={'My personal portfolio website, The one currently you are in :-).'}
                     project_image={[port2]}
+                    project_id={'p-2'}
                 />
 
                 <ProjectCard
@@ -59,6 +61,7 @@ export default function ProjectSection() {
                     git_link={'https://github.com/Alien501/sync-play-template'}
                     project_desc={'A simple site made to upload offline music playlist to Spotify with ease.[Note: Still under beta and not available for mass. Maybe soon :-)]'}
                     project_image={[syncPlay]}
+                    project_id={'p-3'}
                 />
 
                 <ProjectCard
@@ -67,6 +70,7 @@ export default function ProjectSection() {
                     git_link={''}
                     project_desc={'A website I made for my college\'s techincal club, DEVS. This is currently serving as their current website.'}
                     project_image={[devsWeb]}
+                    project_id={'p-4'}
                 />
                 <ProjectCard
                     project_title={'REC Companion'}
@@ -74,6 +78,7 @@ export default function ProjectSection() {
                     git_link={'https://github.com/DevsREC/rec_comapnion'}
                     project_desc={'A PWA collabratively made under DEVS for ease access of various functionalities present and offered my college.'}
                     project_image={[devsComp]}
+                    project_id={'p-5'}
                 />
                 <ProjectCard
                     project_title={'Thirrukural'}
@@ -81,6 +86,7 @@ export default function ProjectSection() {
                     git_link={'https://github.com/Alien501/thirukural'}
                     project_desc={'The Thirukural API & Frontend project is a web application designed to make the Thirukural accessible to all. Using Node.js, Express.js, React, NextUI, and Tailwind CSS, it provides a comprehensive API and a user-friendly interface to explore this ancient Tamil literary work.'}
                     project_image={[thirukural]}
+                    project_id={'p-6'}
                 />
             </div>
         </div>

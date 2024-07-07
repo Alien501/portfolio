@@ -7,6 +7,7 @@ const SmoothScrolling = ({ children }) => {
             lerp: 1.5,
             duration: 3.5,
             smoothTouch: true,
+            syncTouch: true
         }}>
             {
                 children
